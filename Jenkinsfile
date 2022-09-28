@@ -3,7 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'node ./hello.js'
+                sh 'node --version'
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "multi-line"
+                    ls -lah
+                '''
             }
         }
     }
